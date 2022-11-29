@@ -69,4 +69,10 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    @Test
+    public void should_return_order_value_for_selected_item_names(){
+        List<String> itemNameList = Arrays.asList("Sweet corn soup","Vegetable lasagne");
+        assertEquals(388,restaurant.findOrderValue(itemNameList));
+    }
+
 }
