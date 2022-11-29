@@ -60,6 +60,18 @@ public class Restaurant {
 
     }
 
+    public Integer findOrderValue(List<String> itemNames){
+        int sum = 0;
+
+        for(String item : itemNames){
+            Item item1 = findItemByName(item);
+            if(item1!=null){
+                sum+=item1.getPrice();
+            }
+        }
+        return sum;
+    }
+
     public String getName() {
         return name;
     }
